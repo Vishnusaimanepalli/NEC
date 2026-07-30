@@ -1,0 +1,39 @@
+import java.util.Scanner;
+class Main{
+    public static void printnum(int n){
+        int pow=1,temp;
+        temp=n;
+        while (temp>=10){
+            temp/=10;
+            pow*=10;
+        }
+        while(pow>0){
+            System.out.println(n/pow);
+            n%=pow;
+            pow/=10;
+        }
+    }
+    public static int reverse(int n){
+        int rem;
+        int rev=0;
+    
+        while(n!=0){
+        rem= n%10;
+        rev=(rev*10)+rem;
+        n=n/10;
+        }
+        return rev;
+        }
+    public static void main(String[] args){
+        Scanner Sc= new Scanner(System.in);
+        System.out.print("Enter a Number :");
+        
+        int n= Sc.nextInt();
+        printnum(n);
+           System.out.println("reverse digits");
+        int Reverse = reverse(n);
+     
+        printnum(Reverse);
+        
+    }
+}
