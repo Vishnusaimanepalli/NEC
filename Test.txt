@@ -1,0 +1,30 @@
+Here are the HackerRank questions organized by topic:
+
+1. Number System
+No.	HackerRank Question
+1	Find Digits
+2	Sherlock and Divisors
+3	Halloween Party
+4	Day of the Programmer
+5	Time Conversion
+6	Strange Grid Again
+
+2. Patterns
+No.	HackerRank Question
+1	Staircase
+2	Java Loops I
+3	Java Loops II
+4	Printing Pattern Using Loops (C Language domain)
+5	Loops
+Note: HackerRank has very few dedicated pattern-printing problems. Most classic patterns (stars, pyramids, diamonds, Pascal's triangle, etc.) are commonly found on Pepcoding, Nados, GeeksforGeeks, and coding interview sheets rather than HackerRank.
+
+3. 1D Arrays
+No.	HackerRank Question
+1	Arrays - DS
+2	Java 1D Array
+3	Reverse Array
+4	Left Rotation
+5	Sparse Arrays
+6	Dynamic Array
+7	Bill Division
+9	Breaking the Records
