@@ -123,6 +123,19 @@ public class lec13 {
     }
 
     public static ArrayList<String> subSeq(String str) {
+        if (str.length() == 0) {
+            ArrayList<String> base = new ArrayList<>();
+            base.add("");
+            return base;
+        }
+        char ch = str.charAt(0);
+        ArrayList<String> recAns = subSeq(str.substring(1));
+
+        ArrayList<String> newAns = new ArrayList<>(recAns);
+        for (String s : recAns) {
+            newAns.add(ch + s);
+        }
+        return newAns;
 
     }
 
