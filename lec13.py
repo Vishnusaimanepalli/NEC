@@ -114,7 +114,20 @@ def first_and_last_idx(arr, i, data, ans):
 
     return False
 
-def sub_seq(string):
+def subSeq(s):
+    if len(s) == 0:
+        return [""]
+
+    ch = s[0]
+    recAns = subSeq(s[1:])
+
+    newAns = recAns.copy()
+
+    for sub in recAns:
+        newAns.append(ch + sub)
+
+    return newAns
+
     
     
 # Get KPC number against characters.
@@ -128,7 +141,28 @@ def sub_seq(string):
 #  "7" -> "tu" 
 #  "8" -> "vwx"
 #  "9" -> "yz"
+nokia_keys = [".;", "abc", "def", "ghi", "jkl",
+              "mno", "pqrs", "tu", "vwx", "yz"]
+
+
 def get_kpc(string):
+    if len(string) == 0:
+        return [""]
+        
+    ch = string[0]
+
+
+    code = nokia_keys[int(ch)]
+
+    rec_ans = get_kpc(string[1:])
+
+    new_ans = []
+
+    for i in range(len(code)):
+        for s in rec_ans:
+            new_ans.append(code[i] + s)
+
+    return new_ans
     
     
 n = int(input())

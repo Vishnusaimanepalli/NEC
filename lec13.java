@@ -150,8 +150,26 @@ public class lec13 {
     // "7" -> "tu" 
     // "8" -> "vwx"
     // "9" -> "yz"
+    public static String[] nokiaKeys = { ".;", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu", "vwx", "yz" };
     public static ArrayList<String> getKPC(String str) {
+        if (str.length() == 0) {
+            ArrayList<String> base = new ArrayList<>();
+            base.add("");
+            return base;
+        }
 
+        char ch = str.charAt(0);
+        String code = nokiaKeys[ch - '0'];
+
+        ArrayList<String> recAns = getKPC(str.substring(1));
+
+        ArrayList<String> newAns = new ArrayList<>();
+        for (int i = 0; i < code.length(); i++) {
+            for (String s : recAns) {
+                newAns.add(code.charAt(i) + s);
+            }
+        }
+        return newAns;
     }
 
     public static void main(String[] args) {
