@@ -172,6 +172,36 @@ public class lec13 {
         return newAns;
     }
 
+    public static ArrayList<String> decodeWays(String str) {
+        if (str.length() == 0) {
+            ArrayList<String> base = new ArrayList<>();
+            base.add("");
+            return base;
+        }
+        if (str.charAt(0) == '0') {
+            return new ArrayList<>();
+        }
+        char ch1 = str.charAt(0);
+        ArrayList<String> myAns = new ArrayList<>();
+        ArrayList<String> recAnsForLen1 = decodeWays(str.substring(1));
+        for (String s : recAnsForLen1) {
+            myAns.add((char ) ('a' + ch1 - '1') + s);
+        }
+
+        if (str.length() > 1) {
+            char ch2 = str.charAt(1);
+            int num = (ch1 - '0') * 10 + (ch2 - '0');
+            if (num <= 26) {
+                ArrayList<String> recAnsForLen2 = decodeWays(str.substring(2));
+                for (String s : recAnsForLen2) {
+                    myAns.add((char) ('a' + num - 1) + s);
+                }
+            }
+        }
+        return myAns;
+    }
+
+
     public static void main(String[] args) {
         printArr(inputArr(scn.nextInt(), scn.nextInt()), 0);
     }

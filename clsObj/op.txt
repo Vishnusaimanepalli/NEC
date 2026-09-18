@@ -1,0 +1,35 @@
+With __str__()
+Brand: Google Pixel
+Model: 10 pro xl
+Color: gray
+RAM: 0GB
+ROM: 256GB
+Battery: 6000mAh
+
+
+inside class display()
+Brand: Google Pixel
+Model: 10 pro xl
+Color: gray
+RAM: 0GB
+ROM: 256GB
+Battery: 6000mAh
+
+
+outside class display()
+Brand: Google Pixel
+Model: 10 pro xl
+Color: gray
+RAM: 0GB
+ROM: 256GB
+Battery: 6000mAh
+
+With __str__()
+Brand: Google Pixel
+Model: 10 pro xl
+Color: gray
+RAM: 0GB
+ROM: 256GB
+Battery: 6000mAh
+
+

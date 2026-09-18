@@ -163,6 +163,38 @@ def get_kpc(string):
             new_ans.append(code[i] + s)
 
     return new_ans
+
+def decode_ways(string):
+
+    if len(string) == 0:
+        return [""]
+
+    if string[0] == '0':
+        return []
+
+    ch1 = string[0]
+
+    my_ans = []
+
+    rec_ans_for_len1 = decode_ways(string[1:])
+
+    for s in rec_ans_for_len1:
+        my_ans.append(chr(ord('a') + int(ch1) - 1) + s)
+
+    if len(string) > 1:
+
+        ch2 = string[1]
+
+        num = int(ch1) * 10 + int(ch2)
+
+        if num <= 26:
+
+            rec_ans_for_len2 = decode_ways(string[2:])
+
+            for s in rec_ans_for_len2:
+                my_ans.append(chr(ord('a') + num - 1) + s)
+
+    return my_ans
     
     
 n = int(input())
